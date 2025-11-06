@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Aquila Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+ <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a', // Deep blue
+            accent: '#facc15',  // Yellow
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+ 
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(to bottom, #1e3a8a, #0f172a); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        
+        <span>AQUILA DESIGNS</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="fea.html">Features</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="in.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- a8: Gallery Preview -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">Explore Our Spaces</h2>
+      <p class="text-center text-lg mb-12">Take a glimpse into the thoughtfully designed spaces at Muslim Bungalow</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful prayer space" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+          <p class="absolute bottom-3 left-3 text-white text-sm font-medium">Beautiful prayer space with natural light</p>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Spacious living room" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+          <p class="absolute bottom-3 left-3 text-white text-sm font-medium">Spacious living room with comfortable seating</p>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl md:col-span-1">
+          <img src="https://images.unsplash.com/photo-1556911220-b0b55f59f650?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern kitchenette" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy bedroom" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1558618666-9208c5d06fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Communal parlour" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Relaxing lounge" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery container">
+    <img src="images/1.jpg" alt="Muslim Bungalow Front View" class="gallery-img" />
+    <img src="images/2.jpg" alt="Side View with Garden" class="gallery-img" />
+    <img src="images/3.jpg" alt="Dome and Roof Design" class="gallery-img" />
+    <img src="images/5.jpg" alt="Entrance and Landscaping" class="gallery-img" />
+    <img src="images/5.jpg" alt="Main Entrance Detail" class="gallery-img" />
+  </section>
+
+  <footer class="footer bg-primary text-white py-8 px-6 text-center">
+    <div class="container">
+      <p>Designed by: Aquila Designs | +237653976427 / +237621508477</p>
+      <p style="color: #1e3a8a;">Email: <a href="mailto:aquiladesigns1@gmail.com">aquiladesigns1@gmail.com</a></p>
+      <p>&copy; 2025 Aquila Designs. All rights reserved.</p>
+    </div>
+    
+  
+
+   
+
+  </footer>
+
+  <script src="style.js"></script>
+</body>
+</html>

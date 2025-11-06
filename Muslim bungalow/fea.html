@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features - Aquila Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a', // Deep blue
+            accent: '#facc15',  // Yellow
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+ 
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(to bottom, #1e3a8a, #0f172a); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        
+        <span>AQUILA DESIGNS</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="fea.html">Features</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="in.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>Key Features</h1>
+  </section>
+
+  <section class="features-grid container">
+    <div class="feature-card">
+      <h3>3-in-1 Apartment Cluster</h3>
+      <p>Linked to one central parlour for shared community feel.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fully Serviced</h3>
+      <p>Daily housekeeping, linen change, maintenance on call.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Private + Shared</h3>
+      <p>Private entrances with a welcoming social heart.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Prayer & Halal Ready</h3>
+      <p>Prayer corner in each unit, halal-certified kitchenette.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Secure & Gated</h3>
+      <p>Within an established Christian neighbourhood.</p>
+    </div>
+    <div class="feature-card">
+      <h3>24/7 Reception</h3>
+      <p>Wi-Fi, laundry drop-off, and parcel handling included.</p>
+    </div>
+  </section>
+ <footer class="footer bg-primary text-white py-8 px-6 text-center">
+    <div class="container">
+      <p>Designed by: Aquila Designs | +237653976427 / +237621508477</p>
+      <p style="color: #1e3a8a;">Email: <a href="mailto:aquiladesigns1@gmail.com">aquiladesigns1@gmail.com</a></p>
+      <p>&copy; 2025 Aquila Designs. All rights reserved.</p>
+    </div>
+    
+
+   
+
+  </footer>
+
+  <script src="style.js"></script>
+</body>
+</html>

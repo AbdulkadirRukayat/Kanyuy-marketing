@@ -1,0 +1,337 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muslim Bungalow | Aquila Design</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a', // Deep blue
+            accent: '#facc15',  // Yellow
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(to bottom, #1e3a8a, #0f172a); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        
+        <span>AQUILA DESIGNS</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="fea.html">Features</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="in.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+
+  <!-- a1: Hero Section -->
+  <section class="gradient-bg text-white py-16 px-6 md:py-24">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="mb-6">
+        <span class="inline-block px-4 py-1 bg-yellow-500 text-gray-900 text-sm font-medium rounded-full">Welcome to Harmony</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Aquila Design</h1>
+      <p class="text-3xl md:text-4xl font-medium mb-6">Muslim Bungalow</p>
+      <p class="max-w-3xl mx-auto text-lg mb-10 opacity-90">
+        A serviced apartment where thoughtful design meets everyday convenience. 
+        Three self-contained units linked to a central parlour, creating a bridge of harmony in a diverse community.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#booking" class="inline-block bg-accent text-gray-900 font-semibold py-3 px-8 rounded-full hover:bg-yellow-400 transition">Schedule a Visit</a>
+        <a href="#features" class="inline-block border-2 border-white text-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-gray-900 transition">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- a3: Key Amenities -->
+  <section class="py-16 px-6 bg-gray-100">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-xl text-center card-hover">
+        <div class="w-12 h-12 mx-auto mb-3 bg-green-100 rounded-full flex items-center justify-center">
+          <span class="text-2xl">🕌</span>
+        </div>
+        <h3 class="font-semibold text-lg mb-2 text-green-700">Prayer-Friendly</h3>
+        <p class="text-sm text-gray-600">Prayer corner in each unit with halal-certified kitchenette</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl text-center card-hover">
+        <div class="w-12 h-12 mx-auto mb-3 bg-yellow-100 rounded-full flex items-center justify-center">
+          <span class="text-2xl">🔒</span>
+        </div>
+        <h3 class="font-semibold text-lg mb-2 text-yellow-700">Secure Living</h3>
+        <p class="text-sm text-gray-600">Gated entry within an established neighborhood</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl text-center card-hover">
+        <div class="w-12 h-12 mx-auto mb-3 bg-red-100 rounded-full flex items-center justify-center">
+          <span class="text-2xl">📞</span>
+        </div>
+        <h3 class="font-semibold text-lg mb-2 text-red-700">24/7 Reception</h3>
+        <p class="text-sm text-gray-600">Reception kiosk at parlour entrance</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl text-center card-hover">
+        <div class="w-12 h-12 mx-auto mb-3 bg-blue-100 rounded-full flex items-center justify-center">
+          <span class="text-2xl">📶</span>
+        </div>
+        <h3 class="font-semibold text-lg mb-2 text-blue-700">All Inclusive</h3>
+        <p class="text-sm text-gray-600">Wi-Fi, laundry drop-off, and parcel handling included</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- a4: The Concept -->
+  <section class="py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">The Concept</h2>
+      <div class="w-16 h-1 bg-gradient-to-r from-yellow-400 to-primary mx-auto mb-10"></div>
+      <p class="text-lg mb-12 max-w-3xl mx-auto">
+        Muslim bungalow is a serviced apartment that blends thoughtful design with everyday convenience. 
+        At its heart sits a <strong>central parlour</strong> — a shared, welcoming space where residents gather, connect, and unwind.
+      </p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <div class="w-12 h-12 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🏡</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Private Living</h3>
+          <p class="text-gray-700">Three self-contained apartments branch out in a 3-in-1 layout, each with private entrance, kitchenette, bedroom, and bath.</p>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-xl">
+          <div class="w-12 h-12 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+            <span class="text-2xl">🤝</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Shared Community</h3>
+          <p class="text-gray-700">All units tie seamlessly to the common hub, creating a quiet pocket of harmony amid diverse surroundings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- a5: Perfect For -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">Perfect For</h2>
+      <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Thoughtfully designed for diverse residents who value both community and privacy</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl text-center card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">💼</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Muslim Professionals</h3>
+          <p class="text-sm text-gray-600">On mid-length assignments seeking comfortable, culturally-sensitive accommodation</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl text-center card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-pink-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">👨‍👩‍👧</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Visiting Families</h3>
+          <p class="text-sm text-gray-600">Needing halal-friendly, fully serviced stays with space to gather</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl text-center card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">🎓</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Students & Medical Tourists</h3>
+          <p class="text-sm text-gray-600">Seeking calm, central lodging with all amenities included</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl text-center card-hover">
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">✋</span>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Community Seekers</h3>
+          <p class="text-sm text-gray-600">Anyone who values privacy plus the gentle hum of community</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- a6: Key Features -->
+  <section id="features" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">Key Features</h2>
+      <p class="text-center text-lg mb-12">Every detail designed with your comfort and cultural respect in mind</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl text-center card-hover border">
+          <div class="w-16 h-16 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">🏠</span>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 flex items-center justify-center">
+            <span class="text-green-600 mr-2">✓</span> 3-in-1 Layout
+          </h3>
+          <p class="text-gray-600">Apartment cluster linked to one central parlour</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl text-center card-hover border">
+          <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">✨</span>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 flex items-center justify-center">
+            <span class="text-green-600 mr-2">✓</span> Fully Serviced
+          </h3>
+          <p class="text-gray-600">Daily housekeeping, linen change, maintenance on call</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl text-center card-hover border">
+          <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center">
+            <span class="text-3xl">🔑</span>
+          </div>
+          <h3 class="font-semibold text-xl mb-2 flex items-center justify-center">
+            <span class="text-green-600 mr-2">✓</span> Private & Social
+          </h3>
+          <p class="text-gray-600">Private entrances with a shared social heart</p>
+        </div>
+      </div>
+      <p class="text-center mt-12 text-gray-600">
+        Set within a vibrant Christian community, the design respects cultural sensitivities with prayer-friendly layouts, halal-ready kitchen zones, and modest finishes throughout. 
+        The central parlour stays open and neutral — a place for tea, conversation, or simply passing through.
+      </p>
+    </div>
+  </section>
+  
+  <!-- a8: Gallery Preview -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-4">Explore Our Spaces</h2>
+      <p class="text-center text-lg mb-12">Take a glimpse into the thoughtfully designed spaces at Muslim Bungalow</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful prayer space" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+          <p class="absolute bottom-3 left-3 text-white text-sm font-medium">Beautiful prayer space with natural light</p>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Spacious living room" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+          <p class="absolute bottom-3 left-3 text-white text-sm font-medium">Spacious living room with comfortable seating</p>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl md:col-span-1">
+          <img src="https://images.unsplash.com/photo-1556911220-b0b55f59f650?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern kitchenette" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozy bedroom" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1558618666-9208c5d06fbc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Communal parlour" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="relative group overflow-hidden rounded-xl">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Relaxing lounge" class="w-full h-48 object-cover group-hover:scale-110 transition duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- a2: Booking Form -->
+  <section id="booking" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <form class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+          <input type="text" placeholder="Enter your full name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required minlength="2">
+          <p class="text-xs text-red-500 mt-1">Name must be at least 2 characters</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+          <input type="email" placeholder="your.email@example.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+          <p class="text-xs text-red-500 mt-1">Invalid email address</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
+          <input type="tel" placeholder="+1 (555) 123-4567" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required pattern="[0-9+\-\s\(\)]{10,}">
+          <p class="text-xs text-red-500 mt-1">Phone number must be at least 10 digits</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Room Type *</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+            <option>Select room type</option>
+            <option>1-Bedroom Unit</option>
+            <option>2-Bedroom Unit</option>
+            <option>Full Bungalow</option>
+          </select>
+          <p class="text-xs text-red-500 mt-1">Required</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Check-In Date *</label>
+          <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+          <p class="text-xs text-red-500 mt-1">Check-in date is required</p>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Check-Out Date *</label>
+          <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+          <p class="text-xs text-red-500 mt-1">Check-out date is required</p>
+        </div>
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-700 mb-1">Special Requests or Inquiries *</label>
+          <textarea rows="4" placeholder="Tell us about your specific needs, dietary requirements, or any questions you have..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required minlength="10"></textarea>
+          <p class="text-xs text-red-500 mt-1">Inquiry must be at least 10 characters</p>
+        </div>
+        <div class="md:col-span-2">
+          <button type="submit" class="w-full bg-primary text-white font-semibold py-4 rounded-lg hover:bg-indigo-800 transition text-lg">
+            Submit Booking Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- a7: Experience Harmony (CTA) -->
+  <section class="gradient-bg text-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Experience Harmony</h2>
+      <div class="w-24 h-1 bg-accent mx-auto mb-8"></div>
+      <p class="text-xl mb-12">Join us at Muslim Bungalow where culture, comfort, and community come together</p>
+      <div class="grid md:grid-cols-3 gap-6 max-w-md mx-auto">
+        <a href="tel:+15551234567" class="bg-white/10 backdrop-blur p-6 rounded-xl flex flex-col items-center hover:bg-white/20 transition">
+          <span class="text-3xl mb-2">📞</span>
+          <span class="font-medium">Phone</span>
+          <span class="text-sm">+1 (555) 123-4567</span>
+        </a>
+        <a href="mailto:info@aquiladesign.com" class="bg-white/10 backdrop-blur p-6 rounded-xl flex flex-col items-center hover:bg-white/20 transition">
+          <span class="text-3xl mb-2">✉️</span>
+          <span class="font-medium">Email</span>
+          <span class="text-sm">info@aquiladesign.com</span>
+        </a>
+        <div class="bg-white/10 backdrop-blur p-6 rounded-xl flex flex-col items-center">
+          <span class="text-3xl mb-2">📍</span>
+          <span class="font-medium">Location</span>
+          <span class="text-sm">Coming Soon</span>
+        </div>
+      </div>
+      <a href="#booking" class="inline-block mt-12 bg-accent text-gray-900 font-bold py-4 px-10 rounded-full text-lg hover:bg-yellow-400 transition">
+        Book a Consultation
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-8 px-6 text-center">
+    <p class="text-sm">&copy; 2024 Aquila Design. Where thoughtful design meets everyday convenience.</p>
+  </footer>
+
+</body>
+</html>

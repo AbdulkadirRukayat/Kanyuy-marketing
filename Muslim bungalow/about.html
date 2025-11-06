@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Aquila Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a', // Deep blue
+            accent: '#facc15',  // Yellow
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+ 
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(to bottom, #1e3a8a, #0f172a); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        
+        <span>AQUILA DESIGNS</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="fea.html">Features</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="in.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1>About Muslim Bungalow</h1>
+  </section>
+
+  <section class="about-content container">
+    <h2>Expanded Concept</h2>
+    <p>
+      Muslim Bungalow is a serviced apartment that blends thoughtful design with everyday convenience. 
+      At its heart sits a central parlour — a shared, welcoming space where residents gather, connect, and unwind. 
+      From this parlour, three self-contained apartments branch out in a 3-in-1 layout, each with private entrance, 
+      kitchenette, bedroom, and bath, yet all tied seamlessly to the common hub.
+    </p>
+    <p>
+      Set within a vibrant Christian community, the design respects cultural sensitivities: prayer-friendly layouts, 
+      halal-ready kitchen zones, and modest finishes throughout. The central parlour remains open and neutral — 
+      a place for tea, conversation, or simply passing through.
+    </p>
+
+    <h2>Site Integration</h2>
+    <p>
+      The bungalow mirrors local aesthetics — pitched roofs, muted earth tones — so it feels like a natural extension 
+      rather than an intrusion. Community events can spill into the parlour courtyard when invited, 
+      turning the space into a bridge rather than a barrier.
+    </p>
+
+    <h2>Target Residents</h2>
+    <ul class="target-list">
+      <li>Muslim professionals on mid-length assignments</li>
+      <li>Visiting families needing halal-friendly, serviced stays</li>
+      <li>Students or medical tourists seeking calm, central lodging</li>
+      <li>Anyone who values privacy plus the gentle hum of community</li>
+    </ul>
+  </section>
+<footer class="footer bg-primary text-white py-8 px-6 text-center">
+    <div class="container">
+      <p>Designed by: Aquila Designs | +237653976427 / +237621508477</p>
+      <p style="color: #1e3a8a;">Email: <a href="mailto:aquiladesigns1@gmail.com">aquiladesigns1@gmail.com</a></p>
+      <p>&copy; 2025 Aquila Designs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="style.js"></script>
+</body>
+</html>

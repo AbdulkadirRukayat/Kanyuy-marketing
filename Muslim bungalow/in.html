@@ -1,0 +1,223 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Aquila Design</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+        body { margin: 0 auto; padding: 20px; }
+        form { display: flex; flex-direction: column; }
+        label { margin-top: 10px; }
+        input, textarea { margin-top: 5px; padding: 8px; }
+        button { margin-top: 20px; padding: 10px; background: #006400; color: white; border: none; cursor: pointer; }
+        button:hover { background: #a82d08; }
+        .preview { margin-top: 20px; border: 1px solid #ddd; padding: 10px; }
+        .preview img { max-width: 100%; height: auto; }
+    </style>
+    <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a', // Deep blue
+            accent: '#facc15',  // Yellow
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+ 
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(to bottom, #1e3a8a, #0f172a); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+       
+        <span>AQUILA DESIGNS</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="fea.html">Features</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="in.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h1 class="color-primary">Project Updates & Blog</h1>
+  </section>
+
+  <section class="blog container" id="blog-posts">
+    <!-- Posts loaded by JS -->
+  </section>
+
+  <section class="admin-form container" id="admin-form" style="display: none; margin-top: 40px; padding: 20px; border: 1px solid #ddd; background: #f9f9f9;">
+    <h3>Add New Post (Admin)</h3>
+    <input type="text" id="post-title" placeholder="Post Title" style="width: 100%; padding: 10px; margin: 10px 0;" />
+    <textarea id="post-content" placeholder="Write your post..." style="width: 100%; height: 150px; padding: 10px; margin: 10px 0;"></textarea>
+    <button onclick="addPost()" class="btn">Publish Post</button>
+    <button onclick="toggleAdmin()" class="btn" style="background: #ccc; margin-left: 10px;">Cancel</button>
+  </section>
+
+  <div class="container" style="text-align: center; margin: 20px 0;">
+    <button onclick="toggleAdmin()" class="btn">Admin: Add New Post</button>
+  </div>
+
+  
+
+    <h1 style="align-self: center; color: primary;">Create a Blog Post</h1>
+    <form id="postForm" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">Writeup:</label>
+        <textarea id="content" name="content" rows="10" required></textarea>
+
+        <label for="image">Upload Picture:</label>
+        <input type="file" id="image" name="image" accept="image/*">
+
+        <button type="submit">Post</button>
+    </form>
+
+    <div id="preview" class="preview" style="display: none;">
+        <h2>Preview:</h2>
+        <h3 id="previewTitle"></h3>
+        <p id="previewContent"></p>
+        <img id="previewImage" src="" alt="Preview Image">
+    </div>
+    <BR>
+      <BR>
+<footer class="footer bg-primary text-white py-8 px-6 text-center">
+    <div class="container">
+      <p>Designed by: Aquila Designs | +237653976427 / +237621508477</p>
+      <p class="color-primary">Email: <a href="mailto:aquiladesigns1@gmail.com">aquiladesigns1@gmail.com</a></p>
+      <p>&copy; 2025 Aquila Designs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="style.js"></script>
+  <script>
+    // Initial blog posts
+    const initialPosts = [
+      {
+        title: "Construction Update: Dome Installation Complete",
+        date: "November 5, 2025",
+        content: "The iconic green dome has been successfully installed, marking a major milestone in the Muslim Bungalow project. The structure now reflects its final architectural beauty."
+      },
+      {
+        title: "Landscaping Begins",
+        date: "October 28, 2025",
+        content: "Our team has started planting tropical flora around the bungalow to enhance privacy and serenity. Palm trees and flowering shrubs are being added."
+      }
+    ];
+
+    // Load posts on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      let posts = JSON.parse(localStorage.getItem("blogPosts")) || initialPosts;
+      renderPosts(posts);
+    });
+
+    function renderPosts(posts) {
+      const container = document.getElementById("blog-posts");
+      container.innerHTML = "";
+      posts.forEach(post => {
+        const article = document.createElement("article");
+        article.className = "blog-post";
+        article.innerHTML = `
+          <h3>${post.title}</h3>
+          <small>${post.date}</small>
+          <p>${post.content}</p>
+          <hr>
+        `;
+        container.appendChild(article);
+      });
+    }
+
+    function addPost() {
+      const title = document.getElementById("post-title").value;
+      const content = document.getElementById("post-content").value;
+      if (!title || !content) return alert("Please fill all fields");
+
+      const newPost = {
+        title,
+        content,
+        date: new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })
+      };
+
+      let posts = JSON.parse(localStorage.getItem("blogPosts")) || initialPosts;
+      posts.unshift(newPost);
+      localStorage.setItem("blogPosts", JSON.stringify(posts));
+      renderPosts(posts);
+
+      // Clear form
+      document.getElementById("post-title").value = "";
+      document.getElementById("post-content").value = "";
+      toggleAdmin();
+    }
+
+    function toggleAdmin() {
+      const form = document.getElementById("admin-form");
+      form.style.display = form.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+
+
+
+    <script>
+        const form = document.getElementById('postForm');
+        const preview = document.getElementById('preview');
+        const previewTitle = document.getElementById('previewTitle');
+        const previewContent = document.getElementById('previewContent');
+        const previewImage = document.getElementById('previewImage');
+        const imageInput = document.getElementById('image');
+
+        // Optional: Preview image before upload
+        imageInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent actual form submission for demo
+
+            // Simulate posting - in real scenario, send to server via AJAX or form action
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            previewTitle.textContent = title;
+            previewContent.textContent = content;
+            preview.style.display = 'block';
+
+            // For actual integration, set form action to a server-side script, e.g., action="upload.php"
+            // And handle file upload on server (e.g., with PHP: move_uploaded_file, store in DB)
+            alert('Post submitted! (This is a demo - integrate with server for real functionality)');
+        });
+    </script>
+</body>
+</html>
+
